@@ -1,10 +1,17 @@
+// "use client";
+// import { useQuery } from "@tanstack/react-query";
+// import axios from "axios";
 import Image from "next/image";
-import React from "react";
+// import React, { useEffect } from "react";
 import cover2 from "../assets/cover2.png";
 import cover3 from "../assets/cover3.png";
 import Link from "next/link";
 
-const NewReleases = () => {
+const NewReleases = async ({ accessCode }) => {
+  // const data = await getData(accessCode);
+  // console.log(data);
+  // console.log("show");
+  // console.log(accessCode);
   return (
     <div className="mt-11">
       <h2 className="my-3 text-[24px]">New Release</h2>

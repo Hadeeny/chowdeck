@@ -5,7 +5,7 @@ import Link from "next/link";
 const MobileMenu = ({ open }) => {
   return (
     <div
-      className={`fixed flex z-[100] duration-500 w-full ${
+      className={`fixed md:hidden flex z-[100] duration-500 w-full ${
         open ? "h-screen" : "h-0"
       } inset-0 bg-black`}
     >

@@ -1,12 +1,24 @@
 "use client";
+// import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { OutlineLikeIcon, VectorIcon, WhiteLikeIcon } from "@/components/Icons";
 import cover1 from "../assets/cover1.png";
+import { getCode } from "../app/page";
 
 const TopCharts = () => {
   const searchParams = useSearchParams();
   const accessCode = searchParams.get("code");
+  // getCode(accessCode);
+  // const data = {
+  //   accessCode,
+  // };
+  // const postCode = async () => {
+  //   await axios.post("/api/accesscode/route", data);
+  // };
+
+  // postCode();
+
   return (
     <div className="hidden md:flex gap-y-4 flex-col">
       <h3 className="text-[24px]">Top Charts</h3>

@@ -13,7 +13,10 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="w-[98px] bg-transparent hidden md:flex gap-y-[20px] flex-col items-center h-screen ">
+    <div
+      className="w-[98px] fixed top-[73px] left-0 bg-transparent 
+    hidden md:flex gap-y-[20px] flex-col items-center h-screen "
+    >
       <div className="flex bg-[#1a1e1f] justify-between items-center py-6 flex-col w-[52px] h-[230px] rounded-[32px] ">
         <Link href={"/"}>
           <HomeIcon />
