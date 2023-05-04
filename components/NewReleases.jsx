@@ -7,7 +7,7 @@ import cover2 from "../assets/cover2.png";
 import cover3 from "../assets/cover3.png";
 import Link from "next/link";
 
-const NewReleases = async ({ accessCode }) => {
+const NewReleases = async () => {
   // const data = await getData(accessCode);
   // console.log(data);
   // console.log("show");

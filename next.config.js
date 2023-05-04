@@ -3,10 +3,12 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  api: {
-    bodyParser: {
-      sizeLimit: "1mb",
-    },
+  images: {
+    domains: [
+      "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
+      "i.scdn.co",
+    ],
   },
 };
 

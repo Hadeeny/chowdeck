@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import NowPlaying from "@/components/NowPlaying";
-// import QueryWrapper from "../utils/QueryWrapper";
+import QueryWrapper from "../utils/QueryWrapper";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,14 +13,14 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
       <body className="bg-[rgb(30,30,30)] text-white">
-        {/* <QueryWrapper> */}
-        <Header />
-        <div className="flex mt-[78px] md:ml-[98px]">
-          <Sidebar />
-          {children}
-        </div>
-        <NowPlaying />
-        {/* </QueryWrapper> */}
+        <QueryWrapper>
+          <Header />
+          <div className="flex mt-[78px] md:ml-[98px]">
+            <Sidebar />
+            {children}
+          </div>
+          <NowPlaying />
+        </QueryWrapper>
       </body>
     </html>
   );

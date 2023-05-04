@@ -1,29 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 // import { middleware } from "../../../middleware";
-
-export async function POST(request) {
-  const { title } = await request.json();
+export async function GET() {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${title}`,
+    "https://spotify23.p.rapidapi.com/album_metadata/?id=2jJReDZqTuAxr4R0ItimZc&offset=0&limit=300",
     {
       headers: {
-        "Content-Type": "application/json",
+        "X-RapidAPI-Key": "ea7fa97a79msh722bd57fbebf4aep13320bjsn7072c7fc2e6c",
+        "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
+      // params: {
+      //   id: "3IBcauSj5M2A6lTeffJzdv",
+      //   offset: "0",
+      //   limit: "300",
+      // },
     }
   );
   const data = await res.json();
 
-  return NextResponse.json(data);
+  return NextResponse.json({ data });
 }
 
-// export async function POST() {
-//   const res = await fetch(
-//     `https://connect.deezer.com/oauth/access_token.php?app_id=598584&secret=30d768fefa3433b032ca7dc1c3408eba&code=fr04ec20e979b07668bb259d1fd4eaad`,
-//     {
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     }
-//   );
-//   return NextResponse.json(res);
-// }
+// use this id for jon bellion album
+// 2jJReDZqTuAxr4R0ItimZc
+// 3IBcauSj5M2A6lTeffJzdv
