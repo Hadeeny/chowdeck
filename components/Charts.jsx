@@ -2,7 +2,7 @@
 import useChartQueries from "@/hooks/useChartQueries";
 import Chart from "./Chart";
 
-const Charts = ({ API_KEY }) => {
+const Charts = () => {
   const [queryResults] = useChartQueries();
   return (
     <>
