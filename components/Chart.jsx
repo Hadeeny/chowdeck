@@ -4,13 +4,20 @@ import { OutlineLikeIcon, VectorIcon, WhiteLikeIcon } from "@/components/Icons";
 import { useStore } from "../store";
 import { useRouter } from "next/navigation";
 
+export const getTotalDuration = (items) => {
+  const totalDuration = items.reduce((accumulator, object) => {
+    return accumulator + object.track.duration.totalMilliseconds;
+  }, 0);
+  return new Date(totalDuration).toISOString().slice(11, 19);
+};
+
 // This component is being used in @components/Charts
-const Chart = ({ album, i }) => {
+const Chart = ({ album, key }) => {
   const router = useRouter();
   const { updateMetadata } = useStore();
   return (
     <div
-      key={i}
+      key={key}
       className="w-[417px] flex justify-between p-4 items-center h-[96px] rounded-[20px] bg-gray-800 "
     >
       <div
@@ -35,12 +42,7 @@ const Chart = ({ album, i }) => {
             {album.artists.items[0].profile.name}
             {/* waiting */}
           </p>
-          <p className="text-[12px]">
-            {/* {new Date(chart.track.duration.totalMilliseconds)
-                      .toISOString()
-                      .slice(11, 19)} */}
-            oky
-          </p>
+          <p className="text-[12px]">{getTotalDuration(album.tracks.items)}</p>
         </div>
       </div>
       <div className="w-[37px] cursor-pointer h-[37px] flex justify-center items-center rounded-full border border-red-300 ">
