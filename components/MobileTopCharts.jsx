@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import cover1 from "../assets/cover1.png";
 import Image from "next/image";
 import { OutlineLikeIcon } from "./Icons";
+import useChartQueries from "@/hooks/useChartQueries";
 
 const MobileTopCharts = () => {
+  const [queryResults] = useChartQueries();
   return (
     <div className="overflow-x-hidden md:hidden block w-[90vw] mt-10">
       <ul className="grid w-full grid-flow-col px-4 scroll-auto gap-4 overflow-y-auto overflow-x-scroll overscroll-x-contain">
