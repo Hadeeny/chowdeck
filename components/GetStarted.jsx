@@ -5,10 +5,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import image1 from "@/assets/icons/african-meals.svg";
-import image2 from "@/assets/icons/fastfoodxsnacks.svg";
+import image2 from "@/assets/icons/Fastfoodxsnacks.svg";
 import image3 from "@/assets/icons/drink.svg";
-import image4 from "@/assets/icons/fitfam.svg";
-import image5 from "@/assets/icons/pack.svg";
+import image4 from "@/assets/icons/Fitfam.svg";
+import image5 from "@/assets/icons/Pack.svg";
 const data = [
   {
     id: 1,
