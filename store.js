@@ -6,6 +6,7 @@ import { produce } from "immer";
 export const useStore = create((set) => ({
   metadata: {},
   charts: [],
+  fetchedCharts: [],
   firstChart: {},
   secondChart: {},
   thirdChart: {},
@@ -15,6 +16,12 @@ export const useStore = create((set) => ({
     set(
       produce((draft) => {
         draft.metadata = payload;
+      })
+    ),
+  updateFetchedCharts: (payload) =>
+    set(
+      produce((draft) => {
+        draft.fetchedCharts = payload;
       })
     ),
   addFirstChart: (payload) =>

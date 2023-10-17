@@ -1,6 +1,6 @@
 "use client";
 import useChartQueries from "@/hooks/useChartQueries";
-import Chart from "./Chart";
+import Chart from "./HasYouCovered";
 
 const Charts = () => {
   const [queryResults] = useChartQueries();

@@ -4,7 +4,7 @@ import cover1 from "../assets/cover1.png";
 import Image from "next/image";
 import { OutlineLikeIcon } from "./Icons";
 import useChartQueries from "@/hooks/useChartQueries";
-import { getTotalDuration } from "./Chart";
+import { getTotalDuration } from "./HasYouCovered";
 import { useRouter } from "next/navigation";
 import { useStore } from "@/store";
 const Chart = ({ key, album }) => {

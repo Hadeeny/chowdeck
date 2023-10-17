@@ -9,3 +9,109 @@ body {
 html {
   overflow-x: hidden;
 }
+
+.restaurant::-webkit-scrollbar {
+  background-color: #eee;
+  /* padding: 0 10px; */
+  width: 30px;
+  border-radius: 20px;
+  /* width: 50px; */
+}
+.restaurant::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
+.map-bg {
+  background: url("../assets/icons/map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.restaurant::-webkit-scrollbar-track {
+  background-color: #eee;
+  padding: 0 4px;
+  width: 5px;
+  border-radius: 20px;
+}
+
+.animate-circle {
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: clock-animation 5s linear infinite;
+}
+
+.scroll {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.scroll div {
+  color: white;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  font-weight: 500;
+  animation: animate 30s linear infinite;
+}
+
+.scroll-img {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.scroll-img div {
+  margin: 3rem 0;
+  animation: animate 30s linear infinite;
+}
+
+.scroll-img div:nth-child(2) {
+  animation: animate2 30s linear infinite;
+  animation-delay: -15s;
+}
+
+.scroll span {
+  background-color: rgb(21 128 61);
+  margin: 0 10px;
+  border-radius: 4px;
+  padding: 8px 20px;
+}
+
+.scroll-img span {
+  margin: 0 10px;
+}
+
+.scroll div:nth-child(2) {
+  animation: animate2 30s linear infinite;
+  animation-delay: -15s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes clock-animation {
+  0% {
+    stroke-dashoffset: 188.6;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
