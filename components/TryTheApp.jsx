@@ -5,7 +5,7 @@ import vec1 from "@/assets/vec1.webp";
 import vec2 from "@/assets/vec2.webp";
 import vec3 from "@/assets/vec4.webp";
 import bigphone from "@/assets/bigphone.png";
-import pastry from "@/assets/icons/pastry.svg";
+import pastry from "@/assets/icons/Pastry.svg";
 
 const joinsec = [{ image: vec1 }, { image: vec2 }, { image: vec3 }];
 
