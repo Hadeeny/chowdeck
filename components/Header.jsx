@@ -6,8 +6,8 @@ import logo from "@/assets/icons/logo.svg";
 import cart from "@/assets/icons/cart.svg";
 import open from "@/assets/icons/open.svg";
 import close from "@/assets/icons/close.svg";
-import pack from "@/assets/icons/pack.svg";
-import pastry from "@/assets/icons/pastry.svg";
+import pack from "@/assets/icons/Pack.svg";
+import pastry from "@/assets/icons/Pastry.svg";
 import Fitfam from "@/assets/icons/Fitfam.svg";
 import drink from "@/assets/icons/drink.svg";
 import Fastfoodxsnacks from "@/assets/icons/Fastfoodxsnacks.svg";
@@ -55,11 +55,7 @@ const Header = () => {
             onClick={() => setIsOpened(!isOpened)}
             className="bg-chow-green md:hidden block cursor pointer p-4 shadow-xl rounded-full"
           >
-            <Image
-              className="w-[2rem]"
-              src={isOpened ? close : open}
-              alt="menu"
-            />
+            <Image className="w-[2rem]" src={open} alt="menu" />
           </div>
         </div>
       </div>
