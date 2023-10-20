@@ -5,7 +5,7 @@ import vec1 from "@/assets/vec1.webp";
 import vec2 from "@/assets/vec2.webp";
 import vec3 from "@/assets/vec4.webp";
 import bigphone from "@/assets/bigphone.png";
-// import foodpizza from "@/assets/foodpizza.svg";
+import pastry from "@/assets/icons/pastry.svg";
 
 const joinsec = [{ image: vec1 }, { image: vec2 }, { image: vec3 }];
 
@@ -18,8 +18,8 @@ const TryTheApp = () => {
         <li className="px-4 rounded-full py-2">Rider</li>
       </ul>
       <div className="text-center mt-8">
-        <h2 className="text-6xl font-bold">Try the App</h2>
-        <p className="max-w-md text-xl my-8 mx-auto">
+        <h2 className="text-3xl font-bold">Try the App</h2>
+        <p className="max-w-md text-base my-8 mx-auto">
           Have meals delivered to you within minutes from a wide variety of
           restaurants ranging from African to Continental cuisines to satisfy
           your cravings.
@@ -29,9 +29,12 @@ const TryTheApp = () => {
           <div className=" bg-chow-green w-12 h-12 rounded-full"></div>
           <div className=" bg-chow-green w-12 h-12 rounded-full"></div>
         </div>
-        <div className="md:w-1/3 w-2/3 mx-auto">
+        <div className="md:w-1/3 w-2/3 relative mx-auto">
           <Image className="w-full h-full" src={bigphone} />
-          {/* <Image className="w-full h-full" src={foodpizza} /> */}
+          <Image
+            className="w-1/3 h-full -top-[15rem] md:-top-[23rem] -right-9 absolute"
+            src={pastry}
+          />
         </div>
       </div>
 

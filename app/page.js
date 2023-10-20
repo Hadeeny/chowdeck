@@ -18,7 +18,7 @@ const Home = () => {
         {/* <div className="w-full bg-white h-[20rem]"></div> */}
         <Image
           alt="path"
-          className="absolute z-[200000] -bottom-10 inset-x-0"
+          className="absolute scale-[1.4] md:scale-[1] z-[20] md:-bottom-10 -bottom-5 inset-x-0"
           src={path}
         />
       </div>
