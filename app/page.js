@@ -6,10 +6,13 @@ import TryTheApp from "@/components/TryTheApp";
 import path from "@/assets/icons/svgpath.svg";
 import Image from "next/image";
 import Link from "next/link";
+import Stories from "@/components/Stories";
+import Prefooter from "@/components/Prefooter";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <main className="bg-white pb-[4rem]">
+    <main className="bg-white">
       <Hero />
       <TryTheApp />
       <div className="-space-y-[20rem] relative md:-space-y-[50rem]">
@@ -43,6 +46,9 @@ const Home = () => {
       >
         <span>Join our community</span>
       </Link>
+      <Stories />
+      <Prefooter />
+      <Footer />
     </main>
   );
 };

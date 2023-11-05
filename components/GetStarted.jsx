@@ -44,6 +44,7 @@ const data = [
 const GetStarted = () => {
   const [iterator, setIterator] = useState(0);
   const [value, setValue] = useState(0);
+  const [countdown, setCountDown] = useState(5000);
 
   useEffect(
     (params) => {
@@ -54,7 +55,7 @@ const GetStarted = () => {
       };
       setTimeout(() => {
         switchItem();
-      }, 5000);
+      }, countdown);
     },
     [iterator]
   );
@@ -74,7 +75,15 @@ const GetStarted = () => {
         <div className="flex  w-full justify-between items-center">
           <ul className="flex w-full md:w-auto -space-x-0 md:-space-x-10">
             {data.map((nav, i) => (
-              <svg key={i} className="w-[110px] h-[110px]">
+              <svg
+                key={i}
+                onClick={() => {
+                  // setCountDown(0);
+                  setIterator(i);
+                  // setCountDown(5000);
+                }}
+                className="w-[110px] h-[110px]"
+              >
                 <circle
                   className={`${i == iterator && "animate-circle"}`}
                   // width="50px"
