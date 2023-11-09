@@ -4,10 +4,12 @@ import pre1 from "@/assets/icons/footer1.svg";
 import pack from "@/assets/icons/Pack.svg";
 import Link from "next/link";
 import pre2 from "@/assets/footer2.webp";
+import Faqs from "./Faqs";
 
 const Prefooter = () => {
   return (
-    <div className="bg-[#000000ff] pt-2 px-6">
+    <div className="bg-[#000000ff] mt-[15rem] pt-2 px-6">
+      <Faqs />
       <div className=" flex flex-col md:flex-row gap-4 text-white pb-[2rem] pt-[8rem] ">
         <div className="w-full bg-chow-green relative rounded-xl pt-[2rem] px-6 md:w-1/2">
           <div className="space-y-4 md:space-y-12">

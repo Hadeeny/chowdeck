@@ -38,63 +38,63 @@ const MapRestaurant = () => {
       <div className="w-full md:divide-x-4 h-[110vh] md:divide-y-0 divide-y-4 divide-black md:divide-black border-4 mt-[10rem] border-black rounded-2xl flex flex-col md:flex-row">
         <div className="w-full map-bg relative md:w-[60%] md:h-auto h-1/2">
           <div
-            className="w-[30rem] rounded-full absolute border-[4px] border-white bottom-10 inset-x-0 mx-auto h-[4rem] 
+            className="md:w-[30rem] w-full rounded-full absolute border-[4px] border-white bottom-10 inset-x-0 mx-auto h-[4rem] 
           bg-white/40  flex items-center justify-center backdrop-blur-md"
           >
             Click on any live location to order from restaurants near you
           </div>
           <a href="/">
             <Image
-              className="w-[6rem] top-10 left-10 absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-10 left-10 absolute h-[4rem] md:h-[6rem]"
               src={abuja}
               alt="abuja"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[10rem] left-[20rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[10rem] left-[1rem] md:right-[20rem] absolute h-[4rem] md:h-[6rem]"
               src={gbagada}
               alt="gbagada"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[10rem] right-[4rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[10rem] right-[4rem] absolute h-[4rem] md:h-[6rem]"
               src={Lekki}
               alt="Lekki"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[16rem] left-[10rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[16rem] left-[10rem] absolute h-[4rem] md:h-[6rem]"
               src={Ikeja}
               alt="Lekki"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[20rem] right-[4rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[20rem] right-[4rem] absolute h-[4rem] md:h-[6rem]"
               src={egbeda}
               alt="Lekki"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[30rem] left-[2rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[20rem] md:top-[30rem] left-[2rem] absolute h-[4rem] md:h-[6rem]"
               src={festac}
               alt="Lekki"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[25rem] left-[19rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[25rem] left-[19rem] absolute h-[4rem] md:h-[6rem]"
               src={ojo}
               alt="Lekki"
             />
           </a>
           <a href="/">
             <Image
-              className="w-[6rem] top-[30rem] right-[5rem] absolute h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[4rem] md:top-[30rem] right-[5rem] absolute h-[4rem] md:h-[6rem]"
               src={Yaba}
               alt="Lekki"
             />

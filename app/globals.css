@@ -23,6 +23,26 @@ html {
   border: 5px solid transparent;
   background-clip: content-box;
 }
+.scroll-class::-webkit-scrollbar {
+  background-color: #eee;
+  /* padding: 0 10px; */
+  width: 100%;
+  border-radius: 20px;
+  /* width: 50px; */
+}
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
+.scroll-class::-webkit-scrollbar-track {
+  /* background-color: #eee; */
+  /* padding: 0 4px; */
+  width: 100%;
+  border-radius: 20px;
+}
 
 .map-bg {
   background: url("../assets/icons/map.svg");
