@@ -38,8 +38,8 @@ const MapRestaurant = () => {
       <div className="w-full md:divide-x-4 h-[110vh] md:divide-y-0 divide-y-4 divide-black md:divide-black border-4 mt-[10rem] border-black rounded-2xl flex flex-col md:flex-row">
         <div className="w-full map-bg relative md:w-[60%] md:h-auto h-1/2">
           <div
-            className="md:w-[30rem] w-full rounded-full absolute border-[4px] border-white bottom-10 inset-x-0 mx-auto h-[4rem] 
-          bg-white/40  flex items-center justify-center backdrop-blur-md"
+            className="md:w-[30rem] w-full md:rounded-full absolute border-[4px] border-white bottom-0 text-center px-6 md:bottom-10 inset-x-0 mx-auto h-[4rem] 
+          md:bg-white/40 bg-white flex items-center justify-center backdrop-blur-md"
           >
             Click on any live location to order from restaurants near you
           </div>
@@ -59,7 +59,7 @@ const MapRestaurant = () => {
           </a>
           <a href="/">
             <Image
-              className="md:w-[6rem] w-[4rem] top-[10rem] right-[4rem] absolute h-[4rem] md:h-[6rem]"
+              className="md:w-[6rem] w-[4rem] top-[10rem] right-[8rem] md:right-[4rem] absolute h-[4rem] md:h-[6rem]"
               src={Lekki}
               alt="Lekki"
             />
@@ -87,7 +87,7 @@ const MapRestaurant = () => {
           </a>
           <a href="/">
             <Image
-              className="md:w-[6rem] w-[4rem] top-[25rem] left-[19rem] absolute h-[4rem] md:h-[6rem]"
+              className="md:w-[6rem] w-[4rem] md:top-[25rem] top-[12rem] left-[19rem] absolute h-[4rem] md:h-[6rem]"
               src={ojo}
               alt="Lekki"
             />

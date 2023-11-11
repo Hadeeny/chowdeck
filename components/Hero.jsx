@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ChowLottie from "@/assets/lottie.json";
 import { useLottie } from "lottie-react";
 import playstore from "../assets/icons/icon2.svg";
-import starLogo from "../assets/icons/icon6.svg";
+import whiteapple from "../assets/icons/whiteapple.svg";
 import Link from "next/link";
 import Image from "next/image";
 const Hero = () => {
@@ -64,14 +64,22 @@ const Hero = () => {
           href={"/"}
         >
           Download on playstore{" "}
-          <Image className="w-5 h-5 mt-1" src={playstore} />
+          <Image className="w-5 h-5 mt-1" src={playstore} alt="play store" />
         </Link>
         <Link
+          className="bg-chow-green flex gap-x-4 item-center text-lg rounded-md px-6 py-2 text-white"
+          href={"/"}
+        >
+          Download on appstore{" "}
+          <Image className="w-5 h-5 mt-1" src={whiteapple} alt="appstore" />
+        </Link>
+        {/* <Link
           className="bg-chow-green text-lg rounded-md px-6 py-2 text-white"
           href={"/"}
         >
           Download on playstore
-        </Link>
+          <Image className="w-5 h-5 mt-1" src={whiteapple} alt="whiteapple" />
+        </Link> */}
       </div>
       <div className="scale-[3] md:scale-[1]">{View}</div>
     </div>

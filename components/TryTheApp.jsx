@@ -6,6 +6,8 @@ import vec2 from "@/assets/vec2.webp";
 import vec3 from "@/assets/vec4.webp";
 import bigphone from "@/assets/bigphone.png";
 import pastry from "@/assets/icons/Pastry.svg";
+import iphone from "@/assets/icons/whiteapple.svg";
+import playstore from "@/assets/icons/playstore.svg";
 
 const joinsec = [{ image: vec1 }, { image: vec2 }, { image: vec3 }];
 
@@ -26,10 +28,15 @@ const TryTheApp = () => {
         </p>
 
         <div className="flex my-8 gap-x-6 max-w-min mx-auto">
-          <div className=" bg-chow-green w-12 h-12 rounded-full"></div>
-          <div className=" bg-chow-green w-12 h-12 rounded-full"></div>
+          <div className=" bg-chow-green flex items-center justify-center w-12 h-12 rounded-full">
+            <Image className="w-5 h-5" src={playstore} alt="playstore" />
+          </div>
+          <div className=" bg-chow-green flex items-center justify-center w-12 h-12 rounded-full">
+            <Image className="w-5 h-5" src={iphone} alt="iphone" />
+          </div>
         </div>
-        <div className="md:w-1/3 w-2/3 relative mx-auto">
+        <br />
+        <div className="md:w-[25rem] w-2/3 relative mx-auto">
           <Image className="w-full h-full" src={bigphone} />
           <Image
             className="w-1/3 h-full -top-[15rem] md:-top-[23rem] -right-9 absolute"

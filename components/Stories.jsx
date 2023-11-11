@@ -9,7 +9,7 @@ import blog1 from "@/assets/blogg1.png";
 import fitfam from "@/assets/icons/Pack.svg";
 
 const Stories = () => {
-  const joinsec = [{ image: blog1 }, { image: fitfam }, { image: blog1 }];
+  const joinsec = [{ image: blog1 }, { image: blog1 }, { image: blog1 }];
   return (
     <div className="px-4">
       <div className="text-[4rem] flex gap-x-2 font-bold">
@@ -23,8 +23,11 @@ const Stories = () => {
             key={i}
             className="border-[4px] w-full pb-2 rounded-xl border-black"
           >
-            <div className="w-full h-[15rem] border-b-[4px] border-black">
-              <Image className="rounded-t-lg w-full h-full" src={item.image} />
+            <div className="w-full border-b-[4px] border-black">
+              <Image
+                className="rounded-t-lg object-contain w-full h-full"
+                src={item.image}
+              />
             </div>
             <div className="px-4 py-8 h-[10rem] w-full overflow-hidden flex gap-y-4 items-start flex-col">
               <p className="font-semibold text-center">

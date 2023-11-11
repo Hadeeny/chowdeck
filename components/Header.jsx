@@ -9,6 +9,9 @@ import close from "@/assets/icons/close.svg";
 import pack from "@/assets/icons/Pack.svg";
 import pastry from "@/assets/icons/Pastry.svg";
 import Fitfam from "@/assets/icons/Fitfam.svg";
+import bloghover1 from "@/assets/icons/blog-hover1.svg";
+import companyhover from "@/assets/icons/company-hover.svg";
+import contacthover from "@/assets/icons/contact-hover.svg";
 import drink from "@/assets/icons/drink.svg";
 import Fastfoodxsnacks from "@/assets/icons/Fastfoodxsnacks.svg";
 import { useState } from "react";
@@ -38,11 +41,44 @@ const Header = () => {
         </div>
         {/* <div className="">
       </div> */}
-        <ul className="hidden shadow-xl  md:flex absolute justify-between px-8 max-w-max inset-x-0 mx-auto items-center bg-white rounded-full gap-x-8 text-lg py-3">
-          <li>Company</li>
-          <li>FAQs</li>
-          <li>Blog</li>
-          <li>Contact</li>
+        <ul className="hidden shadow-xl   md:flex absolute justify-between px-8 max-w-max inset-x-0 mx-auto items-center bg-white rounded-full gap-x-8 text-lg py-3">
+          <Link href="/" className="relative group">
+            Company
+            <Image
+              src={companyhover}
+              alt="company hover"
+              className="hidden group-hover:block absolute top-7"
+            />
+          </Link>
+          <Link href="/" className="relative group">
+            FAQs
+            <Image
+              src={companyhover}
+              alt="company hover"
+              className="hidden group-hover:block absolute top-7"
+            />
+          </Link>
+          <Link href="/" className="relative group">
+            Blog
+            <Image
+              src={bloghover1}
+              alt="company hover"
+              className="hidden group-hover:block scale-[1.8] absolute top-0"
+            />
+            <Image
+              src={bloghover1}
+              alt="company hover"
+              className="hidden group-hover:block scale-[1.8] absolute top-7"
+            />
+          </Link>
+          <Link href="/" className="relative group">
+            Contact
+            <Image
+              src={contacthover}
+              alt="contact hover"
+              className="hidden  group-hover:block absolute top-0 scale-150"
+            />
+          </Link>
         </ul>
         <div className="flex items-center gap-x-4">
           <div className="bg-white shadow-xl hidden md:block px-6 rounded-full gap-x-4 text-lg py-3">

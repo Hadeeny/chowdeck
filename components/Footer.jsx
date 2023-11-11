@@ -1,23 +1,45 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import chowlogo from "@/assets/icons/icon6.svg";
+import logo from "@/assets/icons/logo.svg";
+import bluestar from "@/assets/icons/bluestar.svg";
+import starincircle from "@/assets/icons/starincircle.svg";
+import blackmultistars from "@/assets/icons/pinkmultistars.svg";
+import greensemicircle from "@/assets/icons/bluesemicircle.svg";
 
 const Footer = () => {
   return (
     <div className="bg-[#000000ff] flex flex-col-reverse md:flex-row text-slate-400 px-6">
       <div className="w-full flex flex-col justify-between md:w-[30%] border-t-[1px] md:border-r-[1px] border-slate-600">
-        <div className="hidden md:block">chowdeck</div>
-        <div className="text-[4rem] text-white font-bold">chowdeck</div>
+        <div className="hidden md:block">
+          <Image
+            className="w-32 h-32 mt-[4rem]"
+            alt="chow logo"
+            src={chowlogo}
+          />
+        </div>
+        <div className="text-[3rem] flex gap-x-2 items-center text-white font-bold">
+          <Image src={logo} alt="chowdeck logo" className="w-14 h-14" />
+          chowdeck
+        </div>
       </div>
       <div className="flex w-full md:w-[70%] flex-col md:flex-col-reverse">
         <div className="grid text-slate-100 text-xl  grid-cols-2">
-          <div className="text-center border-b border-slate-600 p-8">
+          <div className="text-center flex items-center justify-center gap-x-2 border-b border-slate-600 p-8">
+            <Image src={bluestar} alt="blue star" className="w-5 h-5" />
             Twitter
           </div>
-          <div className="text-center border-b border-l border-slate-600 p-8">
+          <div className="text-center flex items-center justify-center gap-x-2 border-b border-l border-slate-600 p-8">
+            <Image src={blackmultistars} alt="blue star" className="w-5 h-5" />
             Instagram
           </div>
-          <div className="text-center border-slate-600 p-8">Facebook </div>
-          <div className="text-center border-l border-slate-600 p-8">
+          <div className="text-center flex items-center justify-center gap-x-2 border-slate-600 p-8">
+            <Image src={greensemicircle} alt="blue star" className="w-5 h-5" />
+            Facebook{" "}
+          </div>
+          <div className="text-center flex items-center justify-center gap-x-2 border-l border-slate-600 p-8">
+            <Image src={starincircle} alt="blue star" className="w-5 h-5" />
             Linkedin
           </div>
         </div>
