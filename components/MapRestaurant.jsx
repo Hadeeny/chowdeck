@@ -9,6 +9,9 @@ import Ikeja from "@/assets/Ikeja.png";
 import Lekki from "@/assets/Lekki.png";
 import ojo from "@/assets/ojo.png";
 import Yaba from "@/assets/Yaba.png";
+{
+  /* <div class="my-3 px-4 mr-2 max-h-[600px] lg:max-h-[680px] overflow-y-auto"></div> */
+}
 
 const MapRestaurant = () => {
   const restaurants = [
@@ -35,8 +38,8 @@ const MapRestaurant = () => {
   ];
   return (
     <section className="w-full px-4 overflow-y-hidden">
-      <div className="w-full md:divide-x-4 h-[110vh] md:divide-y-0 divide-y-4 divide-black md:divide-black border-4 mt-[10rem] border-black rounded-2xl flex flex-col md:flex-row">
-        <div className="w-full map-bg relative md:w-[60%] md:h-auto h-1/2">
+      <div className="w-full md:divide-x-4 md:h-[110vh] h-[76rem] md:divide-y-0 divide-y-4 divide-black md:divide-black border-4 mt-[10rem] border-black rounded-2xl flex flex-col md:flex-row">
+        <div className="w-full map-bg relative md:w-[60%] md:h-auto h-[30rem]">
           <div
             className="md:w-[30rem] w-full md:rounded-full absolute border-[4px] border-white bottom-0 text-center px-6 md:bottom-10 inset-x-0 mx-auto h-[4rem] 
           md:bg-white/40 bg-white flex items-center justify-center backdrop-blur-md"
@@ -100,12 +103,12 @@ const MapRestaurant = () => {
             />
           </a>
         </div>
-        <div className="w-full md:w-[40%] md:h-full h-1/2">
+        <div className="w-full md:w-[40%] md:h-full h-[40rem]">
           <div className="bg-[#99c8ff]  text-3xl px-4 font-semibold py-4 border-b-4 border-black">
             Restaurant
           </div>
-          <div className=" w-full p-4  h-full">
-            <ul className="w-full pb-[5rem] pr-3 restaurant h-full space-y-4 overflow-y-scroll">
+          <div className=" w-full px-4 pt-6 pb-8 h-[40rem] md:h-[100vh]">
+            <ul className="w-full pr-3 restaurant h-full space-y-4 overflow-y-scroll">
               {restaurants.map((item, i) => (
                 <li
                   key={i}

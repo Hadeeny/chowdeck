@@ -68,11 +68,11 @@ const Faqs = () => {
   return (
     <section className="w-full border-2 border-black mt-[-8rem] bg-[#ffc501ff] md:bg-white rounded-2xl overflow-y-hidden">
       <div className="w-full  hidden md:flex h-[110vh] md:divide-y-0  divide-y-4 divide-black md:divide-black border-4 border-black rounded-2xl  flex-col md:flex-row">
-        <div className="w-full md:w-[50%]  md:h-full h-1/2">
+        <div className="w-full md:w-[50%] md:h-[80vh] h-1/2">
           <h2 className="font-bold text-[4rem] ml-4">FAQS.</h2>
 
-          <div className=" w-full p-4  h-full">
-            <ul className="w-full pb-[5rem]  pr-3 restaurant h-full space-y-4 overflow-y-scroll">
+          <div className=" w-full p-4  h-[35rem]">
+            <ul className="w-full pb-[2rem]  pr-3 restaurant h-full space-y-4 overflow-y-scroll">
               {faq.map((item, i) => (
                 <li
                   onClick={() => setCurrentIndex(i)}
@@ -91,7 +91,7 @@ const Faqs = () => {
         </div>
         <div className="w-full md:w-[50%] md:h-auto h-1/2 p-4">
           <h2 className="font-bold text-[4rem] ml-4">ANS.</h2>
-          <div className="bg-[#ffc501ff] p-8 rounded-2xl w-full h-full">
+          <div className="bg-[#ffc501ff] p-8 rounded-2xl w-full h-[85vh]">
             <div>Img</div>
             <br />
             <p className="text-2xl">{faq[currentIndex].answer}</p>

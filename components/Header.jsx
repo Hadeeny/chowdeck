@@ -1,5 +1,5 @@
 "use client";
-// import React, { useState } from "react";
+import customericon from "@/assets/icons/customericon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/icons/logo.svg";
@@ -15,6 +15,10 @@ import contacthover from "@/assets/icons/contact-hover.svg";
 import drink from "@/assets/icons/drink.svg";
 import Fastfoodxsnacks from "@/assets/icons/Fastfoodxsnacks.svg";
 import { useState } from "react";
+import bloghover2 from "@/assets/icons/bloghover2.svg";
+import bloghover4 from "@/assets/icons/bloghover4.svg";
+import faqhover from "@/assets/icons/faqhover.svg";
+import faqhover2 from "@/assets/icons/faqhover2.svg";
 
 const Header = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -53,9 +57,14 @@ const Header = () => {
           <Link href="/" className="relative group">
             FAQs
             <Image
-              src={companyhover}
+              src={faqhover}
               alt="company hover"
-              className="hidden group-hover:block absolute top-7"
+              className="hidden scale-[1.2] group-hover:block absolute top-7"
+            />
+            <Image
+              src={faqhover2}
+              alt="company hover"
+              className="hidden scale-[1.2] group-hover:block absolute -top-1"
             />
           </Link>
           <Link href="/" className="relative group">
@@ -70,6 +79,16 @@ const Header = () => {
               alt="company hover"
               className="hidden group-hover:block scale-[1.8] absolute top-7"
             />
+            <Image
+              src={bloghover2}
+              alt="company hover"
+              className="hidden group-hover:block -right-4 scale-[1.2] absolute -top-2"
+            />
+            <Image
+              src={bloghover4}
+              alt="company hover"
+              className="hidden group-hover:block -left-2 scale-[1.2] absolute -top-2"
+            />
           </Link>
           <Link href="/" className="relative group">
             Contact
@@ -81,8 +100,8 @@ const Header = () => {
           </Link>
         </ul>
         <div className="flex items-center gap-x-4">
-          <div className="bg-white shadow-xl hidden md:block px-6 rounded-full gap-x-4 text-lg py-3">
-            Customers
+          <div className="bg-white shadow-xl md:flex items-center hidden  px-8 rounded-full gap-x-2 text-lg py-3">
+            Customers <Image src={customericon} alt="icon" />
           </div>
           <div className="bg-white p-4 shadow-xl rounded-full">
             <Image src={cart} alt="cart" />

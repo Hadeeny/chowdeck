@@ -54,7 +54,7 @@ const Hero = () => {
         transition={{
           duration: 1.4,
         }}
-        className="text-5xl md:text-[7rem] tracking-tighter absolute inset-x-0 z-[10] top-[7rem] md:bottom-0 font-extrabold text-center py-8"
+        className="text-5xl md:text-[7rem] tracking-tighter absolute inset-x-0 z-[10] top-[8rem] md:bottom-0 font-extrabold text-center py-8"
       >
         {words[iterator]}?{/* <Image src={icon} /> */}
       </motion.h2>
@@ -81,7 +81,7 @@ const Hero = () => {
           <Image className="w-5 h-5 mt-1" src={whiteapple} alt="whiteapple" />
         </Link> */}
       </div>
-      <div className="scale-[3] md:scale-[1]">{View}</div>
+      <div className="scale-[3] md:scale-[1.1]">{View}</div>
     </div>
   );
 };
