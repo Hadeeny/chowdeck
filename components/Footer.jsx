@@ -127,37 +127,37 @@ const Footer = () => {
             <div className="uppercase text-lg font-normal">Popular</div>
             <ul className="text-white space-y-3 text-lg">
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Food Delivery</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Surulere</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Ogudu</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Yaba</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Ikeja</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Lekki</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>King Glab</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Korede Spaghetti</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Iyan Aladuke</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Food Fusion</Link>
               </li>
               <li>
-                <Link href={"/"}>Customers</Link>
+                <Link href={"/"}>Belefull</Link>
               </li>
             </ul>
           </div>
