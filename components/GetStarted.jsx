@@ -15,23 +15,23 @@ const data = [
     id: 1,
     image: image1,
     title: "Get Started in 3",
-    backgroundColor: "bg-green-800",
-    alt: "#0c513fff",
+    backgroundColor: "rgb(22 101 52)",
+    alt: "rgb(220 252 231)",
     number: "00",
   },
   {
     id: 2,
     image: image2,
     title: "Download the app",
-    backgroundColor: "bg-blue-300",
-    alt: "#ffedb3ff",
+    backgroundColor: "rgb(147 197 253)",
+    alt: "rgb(168 85 247)",
     number: "01",
   },
   {
     id: 3,
     image: image3,
     title: "Explore categories",
-    backgroundColor: "bg-yellow-300",
+    backgroundColor: "rgb(253 224 71)",
     alt: "#000000",
     number: "02",
   },
@@ -39,15 +39,15 @@ const data = [
     id: 4,
     image: image4,
     title: "Place Order",
-    backgroundColor: "bg-pink-400",
-    alt: "#93c5fdff",
+    backgroundColor: "rgb(244 114 182)",
+    alt: "rgb(5 46 22)",
     number: "03",
   },
   {
     id: 5,
     image: image5,
     title: "Enjoy your meal",
-    backgroundColor: "bg-chow-primary",
+    backgroundColor: "#fff4d4",
     alt: "#000000",
     number: "04",
   },
@@ -99,9 +99,10 @@ const GetStarted = () => {
   }, [data.length, handleDecrement, handleIncrement]); // Include array length in the dependency array
 
   return (
-    <div className="px-4 space-y-8 relative z-10 md:px-8 my-9">
+    <div className="px-4 space-y-8  relative z-10 md:px-8 my-9">
       <div
-        className={`w-full py-4 ${data[iterator].backgroundColor} rounded-xl`}
+        style={{ background: data[iterator].backgroundColor }}
+        className={`w-full py-4 rounded-xl`}
       >
         <h2 className="text-white text-3xl md:text-6xl font-bold text-center">
           {data[iterator].title}
@@ -124,29 +125,67 @@ const GetStarted = () => {
                   setIterator(i);
                   // setCountDown(5000);
                 }}
-                className="relative"
+                className="relative "
               >
                 {nav.number == "00" ? (
-                  <Image
-                    src={blackstar}
-                    alt="black star"
-                    className="w-10 top-9 left-[2.22rem] absolute h-10"
-                  />
+                  <div
+                    // src={blackstar}
+                    // alt="black star"
+                    className="w-10 top-[23px] left-[23px] md:top-[43px] md:left-[2.68rem] absolute h-10"
+                  >
+                    <svg
+                      width="21"
+                      height="24"
+                      fill={
+                        iterator == i ? data[iterator].backgroundColor : "#000"
+                      }
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 142 170"
+                      color={
+                        iterator == i ? nav.alt : data[iterator].backgroundColor
+                      }
+                    >
+                      <path
+                        d="M147.088 74.442a55.722 55.722 0 0 1-2.791 17.472 73.102 73.102 0 0 1-26.43 39.198h-.015L73.823 168l-48.089-40.248C12.806 114.703 1.991 97.022 1 76.475a72.934 72.934 0 0 1 144.595-16.647c.078.427.04.868-.111 1.275a55.929 55.929 0 0 1 1.605 13.34Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M74.248 89.583c15.853 0 28.703-12.85 28.703-28.703 0-15.852-12.85-28.703-28.703-28.703-15.852 0-28.703 12.85-28.703 28.703 0 15.852 12.85 28.703 28.703 28.703Z"
+                        fill="color"
+                      />
+                    </svg>
+                  </div>
                 ) : nav.number == "04" ? (
-                  <Image
-                    src={blackstar}
-                    alt="black star"
-                    className="w-10 top-9 left-[2.22rem] absolute h-10"
-                  />
+                  <div
+                    // src={blackstar}
+                    // alt="black star"
+                    className="w-10 top-[15.5px] left-[15.5px] md:top-[35px] md:left-[2.20rem] absolute h-10"
+                  >
+                    <svg
+                      width="40"
+                      height="40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      // class="text-pastels-yellow"
+                      color={
+                        iterator == i ? nav.alt : data[iterator].backgroundColor
+                      }
+                    >
+                      <path
+                        d="M20 0s-.834 17.324-20 20c0 0 16.453.315 20 20 0 0 1.13-17.018 20-20 0 0-17.93-2.523-20-20Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 ) : (
                   ""
                 )}
-                <svg className="w-[110px] cursor-pointer h-[110px]">
+                <svg className="w-[70px] md:w-[110px] cursor-pointer h-[70px] md:h-[110px]">
                   <circle
                     className={`${i == iterator && "animate-circle"}`}
                     // width="50px"
                     // height="50px"
-                    fill={i == iterator ? "transparent" : "white"}
+                    fill={i == iterator ? "transparent" : data[iterator].alt}
                     strokeWidth="3px"
                     stroke={i == iterator ? `${nav.alt}` : "transparent"}
                     cx="50%"
@@ -161,7 +200,9 @@ const GetStarted = () => {
                     y="50%"
                     dominantBaseline="middle"
                     textAnchor="middle"
-                    className="text-transparent"
+                    fill={
+                      i == iterator ? nav.alt : data[iterator].backgroundColor
+                    }
                   >
                     {nav.number === "00" || nav.number == "04"
                       ? ""
@@ -174,16 +215,43 @@ const GetStarted = () => {
 
           <div className="hidden md:flex gap-x-4 px-8">
             <button
-              className="bg-white cursor-pointer justify-center rounded-full w-[4rem] h-[4rem] flex items-center"
+              style={{ background: data[iterator].alt }}
+              className="cursor-pointer justify-center rounded-full w-[4rem] h-[4rem] flex items-center"
               onClick={handleDecrement}
             >
-              prev
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                color={data[iterator].backgroundColor}
+                // style="color:#038B5C"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+              </svg>
             </button>
             <button
-              className="bg-white justify-center rounded-full w-[4rem] h-[4rem] flex items-center"
+              style={{ background: data[iterator].alt }}
+              className="justify-center rounded-full w-[4rem] h-[4rem] flex items-center"
               onClick={handleIncrement}
             >
-              Next
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                style={{ rotate: "180deg" }}
+                color={data[iterator].backgroundColor}
+                // style="color:#038B5C"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+              </svg>
             </button>
           </div>
         </div>

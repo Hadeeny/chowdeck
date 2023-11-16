@@ -19,7 +19,7 @@ const Footer = () => {
             src={chowlogo}
           />
         </div>
-        <div className="text-[3rem] flex gap-x-2 items-center text-white font-bold">
+        <div className="text-[2.5rem] mb-8 flex gap-x-2 items-center text-white font-bold">
           <Image src={logo} alt="chowdeck logo" className="w-14 h-14" />
           chowdeck
         </div>

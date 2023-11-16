@@ -5,6 +5,7 @@ import vec3 from "@/assets/vec4.webp";
 import Link from "next/link";
 import Image from "next/image";
 import noodles from "@/assets/icons/noodles.svg";
+import read2 from "@/assets/icons/read2.svg";
 import blog1 from "@/assets/blogg1.png";
 import fitfam from "@/assets/icons/Pack.svg";
 

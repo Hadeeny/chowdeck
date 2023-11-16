@@ -9,6 +9,7 @@ import Link from "next/link";
 import Stories from "@/components/Stories";
 import Prefooter from "@/components/Prefooter";
 import Footer from "@/components/Footer";
+import BaseFooter from "@/components/BaseFooter";
 
 const Home = () => {
   return (
@@ -49,6 +50,7 @@ const Home = () => {
       <Stories />
       <Prefooter />
       <Footer />
+      <BaseFooter />
     </main>
   );
 };

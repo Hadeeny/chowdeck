@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import multistar from "@/assets/icons/blackmultistars.svg";
+import Image from "next/image";
 
 const Faqs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +94,7 @@ const Faqs = () => {
         <div className="w-full md:w-[50%] md:h-auto h-1/2 p-4">
           <h2 className="font-bold text-[4rem] ml-4">ANS.</h2>
           <div className="bg-[#ffc501ff] p-8 rounded-2xl w-full h-[85vh]">
-            <div>Img</div>
+            <Image src={multistar} alt="star" />
             <br />
             <p className="text-2xl">{faq[currentIndex].answer}</p>
           </div>
@@ -100,9 +102,11 @@ const Faqs = () => {
       </div>
       <div className="w-full flex flex-col justify-between md:hidden h-[38rem] p-2">
         <div className="">
-          <h2 className="font-bold text-[2rem] ml-2">FAQs.</h2>
+          <div className="flex items-center w-full justify-between">
+            <h2 className="font-bold text-[2rem] ml-2">FAQs.</h2>
+            <Image src={multistar} alt="star" />
+          </div>
           <div className=" p-2 rounded-2xl w-full h-full">
-            <div>Img</div>
             <br />
             <p className="text-lg">{faq[currentIndex].answer}</p>
           </div>

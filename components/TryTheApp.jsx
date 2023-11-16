@@ -8,8 +8,17 @@ import bigphone from "@/assets/bigphone.png";
 import pastry from "@/assets/icons/Pastry.svg";
 import iphone from "@/assets/icons/whiteapple.svg";
 import playstore from "@/assets/icons/playstore.svg";
+import pinkmultistars from "@/assets/icons/pinkmultistars.svg";
+import bluestar from "@/assets/icons/bluestar.svg";
+import greensemicircle from "@/assets/icons/greensemicircle.svg";
+import leftarr from "@/assets/icons/leftarr.svg";
+import downarr from "@/assets/icons/downarr.svg";
 
-const joinsec = [{ image: vec1 }, { image: vec2 }, { image: vec3 }];
+const joinsec = [
+  { image: vec1, icon: pinkmultistars },
+  { image: vec2, icon: greensemicircle },
+  { image: vec3, icon: bluestar },
+];
 
 const TryTheApp = () => {
   return (
@@ -46,20 +55,32 @@ const TryTheApp = () => {
       </div>
 
       <div>
-        <h2 className="md:text-7xl text-3xl  my-14 text-center text-slate-300 font-semibold">
-          Join our growing network
-        </h2>
+        <div className=" flex justify-center gap-x-1 md:gap-x-2 items-center   my-14  font-semibold">
+          <h2 className="md:text-7xl text-[28px] text-slate-300">
+            Join our growing network
+          </h2>
+          <Image src={downarr} alt="arrow" className="w-[2rem] md:w-[4rem]" />
+        </div>
         {/* CARDS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-8 gap-4 items-center">
           {joinsec.map((item, i) => (
             <div key={i} className="border-[4px] rounded-3xl border-black">
-              <div className="px-4 py-8 flex gap-y-8 items-start flex-col">
+              <div className="pl-4 pt-8 pb-2">
+                <Image className="w-[2rem]" src={item.icon} />
+              </div>
+              <div className="px-4 pb-8 flex gap-y-8 items-start flex-col">
                 <p className="font-bold text-3xl">Start Selling</p>
                 <p className="text-lg text-left">
                   Are you a restaurant owner looking to grow your business?
                   Reach new customers when you join our network.
                 </p>
-                <Link href="/">See more</Link>
+                <Link
+                  className="flex uppercase tracking-[3px] font-bold items-center gap-x-3"
+                  href="/"
+                >
+                  See more{" "}
+                  <Image className="rotate-180" src={leftarr} alt="arrow" />
+                </Link>
               </div>
               <div>
                 <Image src={item.image} />

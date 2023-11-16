@@ -34,7 +34,7 @@ const Header = () => {
   ];
   return (
     <>
-      <div className="flex w-full z-[200] px-4 justify-between items-center font-semibold fixed top-6 inset-x-0">
+      <div className="flex w-full z-[200] px-4 justify-between items-start font-semibold fixed top-6 inset-x-0">
         <div className="md:px-6 p-4 flex items-center gap-x-2 shadow-xl md:py-3 rounded-full bg-[#0c513f] text-white">
           <Image
             className="w-[1.4rem] md:w-[1rem] md:mt-1"
@@ -99,16 +99,24 @@ const Header = () => {
             />
           </Link>
         </ul>
-        <div className="flex items-center gap-x-4">
-          <div className="bg-white shadow-xl md:flex items-center hidden  px-8 rounded-full gap-x-2 text-lg py-3">
-            Customers <Image src={customericon} alt="icon" />
+        <div className="flex items-start gap-x-4">
+          <div className="md:flex flex-col group hidden items-end">
+            <button className="bg-white shadow-xl md:flex items-center hidden  px-8 rounded-full gap-x-2 text-lg py-3">
+              Customers <Image src={customericon} alt="icon" />
+            </button>
+            <button className="bg-white md:hidden group-hover:md:flex shadow-xl mt-2 items-center hidden  px-8 rounded-full gap-x-2 text-lg py-3">
+              Vendors
+            </button>
+            <button className="bg-white delay-1000 md:hidden group-hover:md:flex shadow-xl mt-2 items-center hidden  px-8 rounded-full gap-x-2 text-lg py-3">
+              Riders
+            </button>
           </div>
           <div className="bg-white p-4 shadow-xl rounded-full">
             <Image src={cart} alt="cart" />
           </div>
           <div
             onClick={() => setIsOpened(!isOpened)}
-            className="bg-chow-green md:hidden block cursor pointer p-4 shadow-xl rounded-full"
+            className="bg-chow-green md:hidden block cursor pointer p-3 shadow-xl rounded-full"
           >
             <Image className="w-[2rem]" src={open} alt="menu" />
           </div>

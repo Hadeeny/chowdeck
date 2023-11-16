@@ -58,20 +58,33 @@ const Hero = () => {
       >
         {words[iterator]}?{/* <Image src={icon} /> */}
       </motion.h2>
-      <div className="absolute mx-auto top-[14rem] md:top-[20rem] md:flex-row gap-4 flex flex-col items-start w-max inset-x-0  z-[10]">
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.4,
+        }}
+        className="absolute mx-auto top-[14rem] md:top-[20rem] md:flex-row gap-4 flex flex-col items-start w-max inset-x-0  z-[10]"
+      >
         <Link
           className="bg-chow-green flex gap-x-4 item-center text-lg rounded-md px-6 py-2 text-white"
           href={"/"}
         >
-          Download on playstore{" "}
           <Image className="w-5 h-5 mt-1" src={playstore} alt="play store" />
+          Download on playstore{" "}
         </Link>
         <Link
           className="bg-chow-green flex gap-x-4 item-center text-lg rounded-md px-6 py-2 text-white"
           href={"/"}
         >
-          Download on appstore{" "}
           <Image className="w-5 h-5 mt-1" src={whiteapple} alt="appstore" />
+          Download on appstore{" "}
         </Link>
         {/* <Link
           className="bg-chow-green text-lg rounded-md px-6 py-2 text-white"
@@ -80,8 +93,8 @@ const Hero = () => {
           Download on playstore
           <Image className="w-5 h-5 mt-1" src={whiteapple} alt="whiteapple" />
         </Link> */}
-      </div>
-      <div className="scale-[3] md:scale-[1.1]">{View}</div>
+      </motion.div>
+      <div className="scale-[3.1] md:scale-[1.1]">{View}</div>
     </div>
   );
 };
