@@ -85,6 +85,7 @@ const TryTheApp = () => {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5, delay: i * 0.6 }}
+              viewport={{ once: true }}
               key={i}
               className="border-[4px] rounded-3xl border-black"
             >
