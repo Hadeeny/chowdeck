@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,11 +14,27 @@ import bluestar from "@/assets/icons/bluestar.svg";
 import greensemicircle from "@/assets/icons/greensemicircle.svg";
 import leftarr from "@/assets/icons/leftarr.svg";
 import downarr from "@/assets/icons/downarr.svg";
+import { motion } from "framer-motion";
 
 const joinsec = [
-  { image: vec1, icon: pinkmultistars },
-  { image: vec2, icon: greensemicircle },
-  { image: vec3, icon: bluestar },
+  {
+    image: vec1,
+    icon: pinkmultistars,
+    title: "Start selling",
+    text: "Are you a restaurant owner looking to grow your business? Reach new customers when you join our network.",
+  },
+  {
+    image: vec2,
+    icon: greensemicircle,
+    title: "Deliver happiness",
+    text: "Join our elite league of delivery riders delivering happiness to customers and earn to achieve your dreams while at it.",
+  },
+  {
+    image: vec3,
+    icon: bluestar,
+    title: "Behind the scenes",
+    text: "If you are passionate about helping us achieve our goal to deliver meals seamlessly, come join the team.",
+  },
 ];
 
 const TryTheApp = () => {
@@ -64,16 +81,19 @@ const TryTheApp = () => {
         {/* CARDS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-8 gap-4 items-center">
           {joinsec.map((item, i) => (
-            <div key={i} className="border-[4px] rounded-3xl border-black">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, delay: i * 0.6 }}
+              key={i}
+              className="border-[4px] rounded-3xl border-black"
+            >
               <div className="pl-4 pt-8 pb-2">
                 <Image className="w-[2rem]" src={item.icon} />
               </div>
               <div className="px-4 pb-8 flex gap-y-8 items-start flex-col">
-                <p className="font-bold text-3xl">Start Selling</p>
-                <p className="text-lg text-left">
-                  Are you a restaurant owner looking to grow your business?
-                  Reach new customers when you join our network.
-                </p>
+                <p className="font-bold text-3xl">{item.title}</p>
+                <p className="text-lg text-left">{item.text}</p>
                 <Link
                   className="flex uppercase tracking-[3px] font-bold items-center gap-x-3"
                   href="/"
@@ -85,7 +105,7 @@ const TryTheApp = () => {
               <div>
                 <Image src={item.image} />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
